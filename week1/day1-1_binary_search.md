@@ -49,7 +49,7 @@ class Solution:
         end = len(nums)
 
         while start < end:
-            mid = ((end-start) // 2) + start
+            mid = (start + end) // 2
             if nums[mid] == target:
                 return mid
             elif nums[mid] > target:
