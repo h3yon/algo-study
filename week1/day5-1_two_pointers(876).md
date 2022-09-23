@@ -26,12 +26,13 @@ Explanation: Since the list has two middle nodes with values 3 and 4, we return 
  '''
 
 ## 풀어보기
-
+```
 nodeList = []
-        while head!=None:
-            nodeList.append(head)
-            head = head.next
-        return nodeList[len(nodeList)//2]
+ while head!=None:
+     nodeList.append(head)
+     head = head.next
+ return nodeList[len(nodeList)//2]
+```
 
 ## 회고
 
