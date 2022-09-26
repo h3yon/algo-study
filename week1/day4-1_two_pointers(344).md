@@ -47,11 +47,13 @@ class Solution:
 ```python
 class Solution:
     def reverseString(self, s: List[str]) -> None:
-        p, q = 0, len(s)-1
-        while p < q:
-            s[p], s[q] = s[q], s[p]
-        p,q = p+1, q-1
-        return s
+        l = 0
+        r = len(s) - 1
+        
+        while l < r:
+            s[r], s[l] = s[l], s[r]
+            l += 1
+            r -= 1
 ```
 
 아 이렇게 푸는거구나를 느꼈다.  
