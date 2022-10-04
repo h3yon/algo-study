@@ -8,6 +8,7 @@
 앞의 문제와 상당히 유사하다.  
 좀만 더 풀면 감을 제대로 잡을 수 있을 것 같다!
 
+```python
 def orangesRotting(self, grid: List[List[int]]) -> int:
         row, col = len(grid), len(grid[0])
         dirs = [(-1,0),(0,1),(1,0),(0,-1)]
@@ -28,3 +29,4 @@ def orangesRotting(self, grid: List[List[int]]) -> int:
                     fresh_set.remove((x+dx,y+dy))
                     rotten.append([x+dx,y+dy,step+1])
         return step if not fresh_set else -1
+```
