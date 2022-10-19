@@ -14,29 +14,20 @@
 # 풀어보기
 
 ```python
+from itertools import combinations
 
-arr = [(int(input())) for _ in range(9)]
-arr.sort()
-tmp = []
-find = False
+dwarf = [int(input()) for _ in range(9)]
+seven = list(combinations(dwarf, 7))
 
-def dfs(idx):
-    global find
-    if find: return
-    if idx == 7:
-        if sum(tmp) == 100:
-            for i in temp:
-                print(i)
-            find = True
-        return
-    else:
-        for i in range(idx, len(arr)):
-            #?
-    return False
+for i in seven:
+    if sum(i) == 100:
+        ans = list(i)
+        break
 
-nums = []
+ans = sorted(ans)
+for _ans in ans:
+    print(_ans)
 ```
 
-딱 봐도 DFS 문제인 걸 알 수 있다.  
-그런데 감이 안 온다.  
-내일 계속 풀어봐야겠다.
+DFS문제인 줄 알았는데, 문제를 계속 보니 9명 중 7명일 경우 100이 되는 걸 찾는 문제니까,  
+그냥 조합을 이용하면 되는구나를 깨달았다ㅎㅎ
