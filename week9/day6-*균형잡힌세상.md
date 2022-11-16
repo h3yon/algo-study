@@ -2,6 +2,7 @@
 
 - 링크: https://www.acmicpc.net/problem/4949
 
+
 '''
 while True :
     s = input()
@@ -31,3 +32,7 @@ while True :
         print('no')
 
 '''
+
+스택을 좋아하는 편이 아니라서  
+그다지 좋아했던 문제는 아니었지만.  
+그래도 좀 사용하게 돼서 좋았다!
