@@ -2,7 +2,7 @@
 
 - 링크: https://www.acmicpc.net/problem/1003
 - 난이도: Silver III
-
+
 ```python
 import sys
 
@@ -61,6 +61,4 @@ for _ in range(T):
     N = int(input())
     fibo(N)
 ```
-
-
 
