@@ -1,7 +1,7 @@
-# 마인크래프트
+# 피보나치
 
-- 링크: https://www.acmicpc.net/problem/18111
-- 난이도: Silver II
+- 링크: https://www.acmicpc.net/problem/1003
+- 난이도: Silver III
 
 ```python
 import sys
