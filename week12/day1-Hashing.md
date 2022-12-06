@@ -15,6 +15,6 @@ tmp = input()
 res = 0
 
 for i in range(l):
-    res += ((ord(tmp[i])-96) * (31 ** i)) % 1234567891
-print(res)
+    res += ((ord(tmp[i])-96) * (31 ** i))
+print(res % 1234567891)
 ```
