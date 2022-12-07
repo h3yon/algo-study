@@ -32,3 +32,48 @@
 1 2 4 3
 1 2 3 4
 ```
+
+## 풀어보기
+
+```python
+from collections import deque
+
+N, M, V=map(int,input().split())
+matrix=[[0] * (N+1) for i in range(N+1)]
+
+for i in range(M):
+    a, b = map(int, input().split())
+    matrix[a][b] = matrix[b][a] = 1
+    
+visited = [0] * (N+1)
+
+def dfs(v):
+    visited[v] = 1
+    print(v, end=' ')
+    for i in range(1, N+1):
+        # 인접행렬이 방문하지 않은 노드라면
+        if (visited[i] == 0 and matrix[v][i] == 1):
+            dfs(i)
+
+def bfs(v):
+    queue = deque([v])
+    # dfs 후 bfs니까 거꾸로 진행
+    visited[v] = 0
+    
+    while queue:
+        v = queue.popleft()
+        print(v, end=' ')
+        for i in range(1, N+1):
+			# 인접행렬이 방문한 노드라면
+            if (visited[i] == 1 and matrix[v][i] == 1):
+                queue.append(i)
+                visited[i] = 0
+                
+dfs(V)
+print()
+bfs(V)
+```
+
+이 문제는 진짜 중요한 거 같다.  
+특히나 난 DFS만 좋아해서 거의 DFS로만 풀었는데,  
+BFS랑 꼭 친해져야겠다..
