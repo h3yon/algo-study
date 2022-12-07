@@ -30,3 +30,40 @@
 ```
 6
 ```
+
+## 풀어보기
+
+문제를 계속 보면 볼수록 이해가 안 됐다ㅎㅎ  
+5457인데 어떻게 6이지? 이런 생각을 계속 하고 있었는데,  
+6,7,8이 고장났으니까 리모컨으로 5455 입력 후, +, + 총 3번 입력하여 5457이 되는 걸 알 수 있다.  
+5455(4번), +(1번), +(1번) 눌러서 총 6번을 누르는 문제였다.  
+
+```python
+min_cnt = 1e9
+num_int = 0
+btn_set = {i for i in range(0, 10)}
+
+def find(num):
+    global min_cnt, num_int, btn_set
+    for btn in btn_set:
+        tmp = num + str(btn)
+        min_cnt = min(min_cnt, abs(num_int - int(tmp)) + len(tmp))
+
+        if len(tmp) < 6:
+            find(tmp)
+
+def main():
+    global min_cnt, num_int, btn_set
+    num_int = int(input())
+    n = int(input())
+    min_cnt = min(min_cnt, abs(100 - num_int)) # 채널 이동 갯수
+    btn_set -= set(map(int, input().split(' '))) if n else set()
+
+    find('') if n < 10 else ''
+    print(min_cnt)
+
+main()
+```
+
+ㅎㅎ근데 고려해야 할 게 정말 많음을 깨달았다.  
+오늘은 못 풀었지만 다시 한번 풀어봐야겠다.
