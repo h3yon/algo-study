@@ -1,5 +1,8 @@
 # 게임 맵 최단거리
 
+- 링크: https://school.programmers.co.kr/learn/courses/30/lessons/1844
+- 난이도: Level 2
+
 ## 문제 설명
 
 ROR 게임은 두 팀으로 나누어서 진행하며, 상대 팀 진영을 먼저 파괴하면 이기는 게임입니다.  
