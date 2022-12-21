@@ -1,5 +1,8 @@
 # 단어 변환
 
+- 링크: https://school.programmers.co.kr/learn/courses/30/lessons/43163
+- 난이도: Level 3
+
 ## 문제 설명
 
 두 개의 단어 begin, target과 단어의 집합 words가 있습니다.   
