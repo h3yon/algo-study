@@ -37,3 +37,27 @@
 아래와 같이 1개의 네트워크가 있습니다.
 <img width="466" alt="image" src="https://user-images.githubusercontent.com/46602874/208282947-b7963c55-b1df-4588-8879-4e9c84fa8030.png">
 
+## 풀어보기
+
+```
+def solution(n, computers):            
+    visited = [0 for i in range(len(computers))]
+    
+    def DFS(i):
+        visited[i] = True
+        for j in range(n):
+            if computers[i][j] and not visited[j]:
+                DFS(j)
+                
+    answer = 0
+    for i in range(n):
+        if not visited[i]:
+            DFS(i)
+            answer += 1
+        
+    return answer
+```
+
+역시 DFS!  
+예전에 이 문제 풀고 DFS/BFS를 진짜 싫어했는데,  
+이제 조금 익숙해지고 있는 듯해서 다행이다ㅎㅎ
